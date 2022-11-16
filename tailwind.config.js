@@ -1,11 +1,13 @@
 module.exports = {
-  prefix: 'twcss-',
   content: [
     './layout/*.liquid',
     './templates/*.liquid',
+    './templates/*.json',
     './templates/customers/*.liquid',
     './sections/*.liquid',
     './snippets/*.liquid',
+    './config/*.json',
+    './assets/*.liquid'
   ],
   theme: {
     screens: {
@@ -19,11 +21,11 @@ module.exports = {
     extend: {
       fontFamily: {
         heading: 'var(--font-heading-family)',
-      },
+      }, 
     },
     color: {
       black: '#000000',
     },
   },
   plugins: [],
-};
+}; 
