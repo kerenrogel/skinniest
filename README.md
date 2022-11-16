@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Brought to you and maintained by [Trellis Commerce](https://trellis.co/) - A full-service eCommerce agency based in Boston, MA
 
 # Dawn + TailWindCSS + Prettier Shopify Starter Theme
@@ -111,3 +112,6 @@ These secret values are used in the `ci.yml` github workflow:
 
 5. Launch the local development server:
    `shopify theme serve`
+=======
+# skinniest
+>>>>>>> 3104cae (Initial commit)
