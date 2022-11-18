@@ -50,6 +50,7 @@
     },
     "rich_text": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -92,6 +93,7 @@
     },
     "3cb5de27-f439-47da-bc32-1d5a3f583367": {
       "type": "collection-list",
+      "disabled": true,
       "blocks": {
         "template--16963608183061__3cb5de27-f439-47da-bc32-1d5a3f583367-16686657365a905fd2-0": {
           "type": "featured_collection",
@@ -139,6 +141,7 @@
     },
     "43e63253-294b-4c5a-92b4-52d857113ea2": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "template--16963608183061__43e63253-294b-4c5a-92b4-52d857113ea2-1668674937b39a4d0c-0": {
           "type": "heading",
@@ -182,6 +185,7 @@
     },
     "c8112307-e2a2-4341-a185-f8237d958adc": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "template--16963608183061__c8112307-e2a2-4341-a185-f8237d958adc-1668674937b39a4d0c-0": {
           "type": "heading",
@@ -225,6 +229,7 @@
     },
     "97c1502d-5455-4b3f-94de-7acb623757ec": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "template--16963608183061__97c1502d-5455-4b3f-94de-7acb623757ec-16686749376b4fc9b2-0": {
           "type": "column",
