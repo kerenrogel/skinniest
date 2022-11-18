@@ -18,17 +18,23 @@
     }
     @media (max-width: 768px) {
         grid-template-areas: "header-menu header-logo header-icons";
-        grid-template-columns: 1fr 2fr 1fr;
     }
     //submenu
-    .nav-item{
+    .nav__item{
         &:hover{
             .nav__item-submenu{
                 display: block;
+                z-index: 1;
             }
         }
-    .nav__item-submenu{
-        display: none;
+        .nav__item-submenu{
+            display: none;
+        }
     }
-    }
+}
+// helpers
+.page-width{
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 1rem;
 }
