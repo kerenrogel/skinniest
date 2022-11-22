@@ -20,7 +20,7 @@
           {% for item in cart.items %}
             <div class="cart-item">
               <div class="flex py-3 border-color w-full items-center md:items-start relative
-                                              {% unless forloop.last %} border-b border-gray-400 {% endunless %}">
+                                      {% unless forloop.last %} border-b border-gray-400 {% endunless %}">
                 <div class="w-4/12">
                   {% if item.image %}
                     {{ item.image | image_url: width: 400 | image_tag: loading: 'lazy', class:'w-full pr-3' }}
