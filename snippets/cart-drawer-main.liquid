@@ -20,7 +20,7 @@
             Cart Header
           </div>
           <div class="mt-6 relative flex-1 px-4 sm:px-6">
-            {{ cart | json }}
+            {%- for item in cart.items -%}{%- endfor -%}
           </div>
 
         </div>
