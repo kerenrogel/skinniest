@@ -1,6 +1,26 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="fixed inset-0 overflow-hidden z-20" x-data="{ showCartDrawer: false }" x-show="showCartDrawer" @toggle-cart.window="showCartDrawer = !showCartDrawer" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+<div class="fixed inset-0 overflow-hidden z-20" x-data="{
+          showCartDrawer: false,
+          loading: false,
+          updateCart(){
+              // send fetch reqeust to update cart
+              fetch('/?view=cart')
+              .then(response => response.text())
+              .then(cartData => {
+                  $refs.cart_content.innerHTML = cartData;
+  
+                  // This code is use to parse json object. for cart count
+                  var el = document.createElement('div');
+                  el.innerHTML = cartData;
+                  var cartCount = JSON.parse(el.querySelector('[data-options]').innerHTML).item_count;
+                  $dispatch('cart-count-updated', cartCount);
+                  this.loading = false;
+  
+              })
+          }
+       }" x-show="showCartDrawer" @cart-updated.window="updateCart;" @toggle-cart.window="showCartDrawer = !showCartDrawer" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
   <div class="absolute inset-0 overflow-hidden">
+
     <div class="absolute inset-0 bg-gray-500 bg-opacity-75" x-show="showCartDrawer" x-transition.opacity @click="showCartDrawer = false" aria-hidden="true"></div>
     <div class="fixed inset-y-0 right-0 max-w-full flex">
 
@@ -15,17 +35,10 @@
           </button>
         </div>
 
-        <div class="h-full flex flex-col py-6 bg-white shadow-xl overflow-y-scroll">
-          <div class="px-4 sm:px-6">
-            Cart Header
-          </div>
-          <div class="mt-6 relative flex-1 px-4 sm:px-6">
-            {%- for item in cart.items -%}
-              <h3>{{ item.title }}</h3>
-              <p></p>{{ item.quantity }}</p>
-            {%- endfor -%}
-          </div>
+        {% render 'loader' %}
 
+        <div class="h-full flex flex-col bg-white shadow-xl overflow-y-scroll" x-ref="cart_content">
+          {% render 'cart-form' %}
         </div>
       </div>
     </div>
