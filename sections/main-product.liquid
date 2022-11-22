@@ -231,27 +231,27 @@
               </noscript>
             {%- when 'buy_buttons' -%}
               <div x-data="{
-                                qty: 1,
-                                addToCart(){
-                                  let formData = new FormData($refs.product_form);
-                
-                                  fetch('/cart/add.js', {
-                                      method: 'POST',
-                                      body: formData
-                                    })
-                                    .then(response => {
-                                      return response.json();
-                                    })
-                                    .then(response => {
-                                      this.$dispatch('cart-updated');
-                                      this.$dispatch('toggle-cart');
-                                    })
-                                    .catch((error) => {
-                                      console.error('Error:', error);
-                                    });
-                
-                                }
-                              }" @quantity-changed.window="qty = $event.detail.quantity">
+                qty: 1,
+                addToCart(){
+                  let formData = new FormData($refs.product_form);
+
+                  fetch('/cart/add.js', {
+                      method: 'POST',
+                      body: formData
+                    })
+                    .then(response => {
+                      return response.json();
+                    })
+                    .then(response => {
+                      this.$dispatch('cart-updated');
+                      this.$dispatch('toggle-cart');
+                    }) 
+                    .catch((error) => {
+                      console.error('Error:', error);
+                    });
+
+                }
+              }" @quantity-changed.window="qty = $event.detail.quantity">
 
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', x-ref: 'product_form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
