@@ -22,6 +22,7 @@
           <div class="mt-6 relative flex-1 px-4 sm:px-6">
             {%- for item in cart.items -%}
               <h3>{{ item.title }}</h3>
+              <p></p>{{ item.quantity }}</p>
             {%- endfor -%}
           </div>
 
