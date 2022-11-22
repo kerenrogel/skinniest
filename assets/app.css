@@ -609,6 +609,9 @@ video {
 .ml-3 {
   margin-left: 0.75rem;
 }
+.-ml-8 {
+  margin-left: -2rem;
+}
 .block {
   display: block;
 }
@@ -881,6 +884,9 @@ video {
 .pl-2 {
   padding-left: 0.5rem;
 }
+.pr-2 {
+  padding-right: 0.5rem;
+}
 .text-left {
   text-align: left;
 }
@@ -1062,6 +1068,10 @@ video {
 
   .sm\:-mr-10 {
     margin-right: -2.5rem;
+  }
+
+  .sm\:-ml-10 {
+    margin-left: -2.5rem;
   }
 
   .sm\:px-6 {
