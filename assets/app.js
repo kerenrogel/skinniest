@@ -2,6 +2,61 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@alpinejs/persist/dist/module.esm.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@alpinejs/persist/dist/module.esm.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ module_default)
+/* harmony export */ });
+// packages/persist/src/index.js
+function src_default(Alpine) {
+  let persist = () => {
+    let alias;
+    let storage = localStorage;
+    return Alpine.interceptor((initialValue, getter, setter, path, key) => {
+      let lookup = alias || `_x_${path}`;
+      let initial = storageHas(lookup, storage) ? storageGet(lookup, storage) : initialValue;
+      setter(initial);
+      Alpine.effect(() => {
+        let value = getter();
+        storageSet(lookup, value, storage);
+        setter(value);
+      });
+      return initial;
+    }, (func) => {
+      func.as = (key) => {
+        alias = key;
+        return func;
+      }, func.using = (target) => {
+        storage = target;
+        return func;
+      };
+    });
+  };
+  Object.defineProperty(Alpine, "$persist", {get: () => persist()});
+  Alpine.magic("persist", persist);
+}
+function storageHas(key, storage) {
+  return storage.getItem(key) !== null;
+}
+function storageGet(key, storage) {
+  return JSON.parse(storage.getItem(key, storage));
+}
+function storageSet(key, value, storage) {
+  storage.setItem(key, JSON.stringify(value));
+}
+
+// packages/persist/builds/module.js
+var module_default = src_default;
+
+
+
+/***/ }),
+
 /***/ "./node_modules/alpinejs/dist/module.esm.js":
 /*!**************************************************!*\
   !*** ./node_modules/alpinejs/dist/module.esm.js ***!
@@ -2980,6 +3035,93 @@ var module_default = src_default;
 
 /***/ }),
 
+/***/ "./src/js/Slider.js":
+/*!**************************!*\
+  !*** ./src/js/Slider.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
+  return {
+    skip: 1,
+    slider: null,
+    active: 1,
+    total: null,
+    interval: 3000,
+    autoplay: false,
+    direction: 'right',
+    init: function init() {
+      var _this = this;
+      this.$nextTick(function () {
+        _this.total = _this.$refs.slider.children.length;
+      });
+      if (this.autoplay) {
+        this.play();
+      }
+    },
+    next: function next() {
+      var _this2 = this;
+      this.to(function (current, offset) {
+        return current + offset * _this2.skip;
+      });
+    },
+    prev: function prev() {
+      var _this3 = this;
+      this.to(function (current, offset) {
+        return current - offset * _this3.skip;
+      });
+    },
+    to: function to(strategy) {
+      var slider = this.$refs.slider;
+      var current = slider.scrollLeft;
+      var offset = slider.firstElementChild.getBoundingClientRect().width;
+      slider.scrollTo({
+        left: strategy(current, offset),
+        behavior: 'smooth'
+      });
+    },
+    play: function play() {
+      var _this4 = this;
+      var counter = this.active;
+      // run every this.interval milliseconds
+      var interval = setInterval(function () {
+        // check if direction is right and click next
+        if (_this4.direction === 'right') {
+          _this4.next();
+          counter++;
+        }
+        // check if direction is left and click prev
+        if (_this4.direction === 'left') {
+          _this4.prev();
+          counter--;
+        }
+        // check if counter is equal to total and change direction to left
+        if (counter == _this4.total) {
+          _this4.direction = 'left';
+        }
+        // check if counter is equal to 1 and change direction to right
+        if (counter == _this4.active) {
+          _this4.direction = 'right';
+        }
+      }, this.interval);
+    },
+    focusableWhenVisible: {
+      'x-intersect:enter': function xIntersectEnter() {
+        this.$el.removeAttribute('tabindex');
+      },
+      'x-intersect:leave': function xIntersectLeave() {
+        this.$el.setAttribute('tabindex', '-1');
+      }
+    }
+  };
+});
+
+/***/ }),
+
 /***/ "./src/js/app.js":
 /*!***********************!*\
   !*** ./src/js/app.js ***!
@@ -2988,9 +3130,37 @@ var module_default = src_default;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
+/* harmony import */ var _alpinejs_persist__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @alpinejs/persist */ "./node_modules/@alpinejs/persist/dist/module.esm.js");
+/* harmony import */ var _Slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Slider.js */ "./src/js/Slider.js");
+
+
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].plugin(_alpinejs_persist__WEBPACK_IMPORTED_MODULE_1__["default"]);
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('Slider', _Slider_js__WEBPACK_IMPORTED_MODULE_2__["default"]);
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
+var Kaia = {
+  updateQuantity: function updateQuantity(line, qty) {
+    fetch('/cart/change.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        quantity: qty,
+        line: line
+      })
+    }).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      // fire javascript event on window
+      window.dispatchEvent(new Event('cart-updated'));
+    })["catch"](function (error) {
+      console.error('Error:', error);
+    });
+  }
+};
+window.Kaia = Kaia;
 
 /***/ }),
 
