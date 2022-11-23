@@ -54,3 +54,14 @@
         @apply bg-black text-white;
     }
 }
+
+// Collection filter
+.filter-form{
+    .filter-group{
+        &[open]{
+            svg{
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
