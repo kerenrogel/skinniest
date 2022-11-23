@@ -41,10 +41,10 @@
     "cart": {
       "title": "Your cart",
       "continue_shopping": "Continue shopping",
-      "cart_empty_title_html": "Your cart is empty",
-      "subtotal": "Subtotal",
-      "checkout": "Check out",
-      "saving": "Total Savings",
+      "cart_empty_title_html": "Your cart is Empty ",
+      "subtotal": "Subtotal:",
+      "checkout": "Checkout",
+      "saving": "Total Savings:",
       "view": "View my cart ({{ count }})",
       "item_added": "Item added to your cart"
     },
@@ -57,8 +57,7 @@
     "slider": {
       "of": "of",
       "next_slide": "Slide right",
-      "previous_slide": "Slide left",
-      "name": "Slider"
+      "previous_slide": "Slide left"
     }
   },
   "newsletter": {
@@ -81,8 +80,7 @@
     "loading": "Loading...",
     "total_reviews": "total reviews",
     "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
-    "collapsible_content_title": "Collapsible content",
-    "complementary_products": "Complementary products"
+    "collapsible_content_title": "Collapsible content"
   },
   "blogs": {
     "article": {
@@ -111,8 +109,6 @@
   "products": {
     "product": {
       "add_to_cart": "Add to cart",
-      "choose_options": "Choose options",
-      "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",
       "on_sale": "Sale",
       "product_variants": "Product variants",
@@ -164,7 +160,7 @@
     "facets": {
       "apply": "Apply",
       "clear": "Clear",
-      "clear_all": "Remove all",
+      "clear_all": "Clear all",
       "from": "From",
       "filter_and_sort": "Filter and sort",
       "filter_by_label": "Filter:",
@@ -173,9 +169,6 @@
         "one": "{{ count }} selected",
         "other": "{{ count }} selected"
       },
-      "filter_selected_accessibility": "{{ type }} ({{ count }} filters selected)",
-      "show_more": "Show more",
-      "show_less": "Show less",
       "max_price": "The highest price is {{ price }}",
       "product_count": {
         "one": "{{ product_count }} of {{ count }} product",
@@ -189,7 +182,7 @@
       "sort_button": "Sort",
       "sort_by_label": "Sort by:",
       "to": "To",
-      "clear_filter": "Remove filter"
+      "clear_filter": "Clear filter"
     }
   },
   "templates": {
@@ -213,15 +206,20 @@
     },
     "contact": {
       "form": {
-        "title": "Contact form",
         "name": "Name",
         "email": "Email",
         "phone": "Phone number",
         "comment": "Comment",
+        "message": "Message",
         "send": "Send",
         "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
         "error_heading": "Please adjust the following:"
       }
+    },
+    "forms": {
+      "post_error": "Not all the fields have been filled out correctly",
+      "post_field_error_html": "The <strong>{{ field }}<\/strong> {{ error }}",
+      "required_field": "Indicates a required field"
     },
     "404": {
       "title": "Page not found",
@@ -256,8 +254,7 @@
         "product": "Product",
         "price": "Price",
         "total": "Total",
-        "quantity": "Quantity",
-        "image": "Product image"
+        "quantity": "Quantity"
       },
       "update": "Update",
       "login": {
@@ -283,7 +280,7 @@
     "collection_template": {
       "empty": "No products found",
       "title": "Collection",
-      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all<\/a>"
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all<\/a>"
     },
     "video": {
       "load_video": "Load video: {{ description }}"
@@ -296,9 +293,6 @@
       "play_slideshow": "Play slideshow",
       "carousel": "Carousel",
       "slide": "Slide"
-    },
-    "page": {
-      "title": "Page title"
     }
   },
   "localization": {
@@ -312,6 +306,8 @@
       "title": "Account",
       "details": "Account details",
       "view_addresses": "View addresses",
+      "default_address": "Default address",
+      "logout": "Logout",
       "return": "Return to Account details"
     },
     "account_fallback": "Account",
@@ -324,8 +320,11 @@
       "cancel": "Decline invitation"
     },
     "addresses": {
-      "title": "Addresses",
+      "title": "Your Addresses",
       "default": "Default",
+      "name": "Full address",
+      "delete_title": "Delete Address",
+      "action": "Actions",
       "add_new": "Add a new address",
       "edit_address": "Edit address",
       "first_name": "First name",
@@ -344,13 +343,14 @@
       "cancel": "Cancel",
       "edit": "Edit",
       "delete": "Delete",
-      "delete_confirm": "Are you sure you wish to delete this address?"
+      "delete_confirm": "Are you sure you want to delete this address?"
     },
     "log_in": "Log in",
     "log_out": "Log out",
     "login_page": {
       "cancel": "Cancel",
       "create_account": "Create account",
+      "create_message": "Don’t Have An Account?",
       "email": "Email",
       "forgot_password": "Forgot your password?",
       "guest_continue": "Continue",
@@ -382,8 +382,7 @@
       "tracking_url": "Tracking link",
       "tracking_company": "Carrier",
       "tracking_number": "Tracking number",
-      "subtotal": "Subtotal",
-      "total_duties": "Duties"
+      "subtotal": "Subtotal"
     },
     "orders": {
       "title": "Order history",
@@ -403,6 +402,7 @@
     "register": {
       "title": "Create account",
       "first_name": "First name",
+      "back": "Back to login",
       "last_name": "Last name",
       "email": "Email",
       "password": "Password",
@@ -410,7 +410,7 @@
     },
     "reset_password": {
       "title": "Reset account password",
-      "subtext": "Enter a new password",
+      "subtext": "Enter a new password for {{ email }}",
       "password": "Password",
       "password_confirm": "Confirm password",
       "submit": "Reset password"
