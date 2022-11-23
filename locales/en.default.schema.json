@@ -1401,6 +1401,9 @@
           "label": "Enable filtering",
           "info": "Customize [filters](\/admin\/menus)"
         },
+        "columns_desktop": {
+          "label": "Columns Desktop"
+        },
         "enable_sorting": {
           "label": "Enable sorting"
         },
