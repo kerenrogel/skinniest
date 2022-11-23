@@ -130,8 +130,7 @@
             "settings": {
               "text": "<p>Welcome to our store<\/p>",
               "bg_color": "#ffffff",
-              "text_color": "#000000",
-              "link": ""
+              "text_color": "#000000"
             }
           }
         },
