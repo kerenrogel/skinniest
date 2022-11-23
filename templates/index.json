@@ -57,15 +57,10 @@
         "heading": {
           "type": "heading",
           "settings": {
-<<<<<<< HEAD
             "label": "Image banner text",
             "default": "<p>Answer goes here...</p>",
             "heading_size": "large",
             "id": "heading"
-=======
-            "heading": "<p>Talk about your brand<\/p>",
-            "heading_size": "large"
->>>>>>> b6caae14d960ba5097cfedeeda346cf8a3858d8e
           }
         },
         "text": {
