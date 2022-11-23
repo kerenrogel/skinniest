@@ -7,8 +7,10 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "large"
+            "label": "Image banner text",
+            "default": "<p>Answer goes here...</p>",
+            "heading_size": "large",
+            "id": "heading"
           }
         },
         "text": {
@@ -55,8 +57,10 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "label": "Image banner text",
+            "default": "<p>Answer goes here...</p>",
+            "heading_size": "large",
+            "id": "heading"
           }
         },
         "text": {
