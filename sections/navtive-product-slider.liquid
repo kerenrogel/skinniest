@@ -12,8 +12,8 @@
   <div class="featured-collection__products">
     {% if section.settings.slider %}
       <div class="relative overflow-x-hidden" @keydown.right="next" @keydown.left="prev" tabindex="0" x-data="Slider" x-init="$nextTick(() => {
-                        slider = $refs.slider;
-                    })" role="region" aria-labelledby="product carousel">
+                                slider = $refs.slider;
+                            })" role="region" aria-labelledby="product carousel">
 
         <button @click="prev" class="text-3xl font-medium absolute top-1/2 transform -translate-y-1/2 left-0 bg-white p-1">
           <span aria-hidden="true">❮</span>
@@ -24,9 +24,9 @@
 
           {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
             <div class="
-                                    {{ section.settings.items_per_row_mobile }}
-                                    {{ section.settings.items_per_row_tablet }}
-                                    {{ section.settings.items_per_row }} flex-shrink-0 px-1 md:px-3">
+                                                    {{ section.settings.items_per_row_mobile }}
+                                                    {{ section.settings.items_per_row_tablet }}
+                                                    {{ section.settings.items_per_row }} flex-shrink-0 px-1 md:px-3">
               {% render 'card-product'
                , card_product: product
                , show_secondary_image: section.settings.show_secondary_image
@@ -43,10 +43,10 @@
       </div>
     {% else %}
       <div class="grid
-                    {{ section.settings.grid_desktop }}
-                    {{ section.settings.grid_tablet }}
-                    {{ section.settings.grid_mobile }}
-                     gap-2">
+                              {{ section.settings.grid_desktop }}
+                              {{ section.settings.grid_tablet }}
+                              {{ section.settings.grid_mobile }}
+                               gap-2">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <div class="">
             {% render 'card-product'
