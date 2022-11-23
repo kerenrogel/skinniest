@@ -7,10 +7,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "label": "Image banner text",
-            "default": "<p>Answer goes here...</p>",
-            "heading_size": "large",
-            "id": "heading"
+            "heading_size": "large"
           }
         },
         "text": {
@@ -57,10 +54,14 @@
         "heading": {
           "type": "heading",
           "settings": {
+<<<<<<< HEAD
             "label": "Image banner text",
             "default": "<p>Answer goes here...</p>",
             "heading_size": "large",
             "id": "heading"
+=======
+            "heading_size": "large"
+>>>>>>> 1bb73320c815529a54dd4efe0cbb67354d409b3c
           }
         },
         "text": {
