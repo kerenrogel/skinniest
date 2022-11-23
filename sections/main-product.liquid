@@ -172,7 +172,7 @@
                         <div class="grid grid-cols-4 md:grid-cols-5 gap-2 ">
                           {%- for value in option.values -%}
                             <input class="sr-only" type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}" {% if option.selected_value == value %}checked{% endif %}>
-                            <label class="border p-2 inline-block text-sm text-center border-gray-700" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                            <label class="border cursor-pointer p-2 inline-block text-sm text-center border-gray-700" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                               {{ value }}
                             </label>
                           {%- endfor -%}
@@ -239,7 +239,7 @@
                       method: 'POST',
                       body: formData
                     })
-                    .then(response => {
+                    .then(response => { 
                       return response.json();
                     })
                     .then(response => {
