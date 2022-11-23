@@ -1429,6 +1429,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.filter-form .filter-group[open] svg {
+  transform: rotate(90deg);
+}
+
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
