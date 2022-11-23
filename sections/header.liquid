@@ -1,5 +1,6 @@
 <div class="border-y">
   <header class="header items-center page-width">
+
     <div class="header__logo mx-auto my-2 md:my-0 md:mr-auto md:ml-0" style="max-width: {{ section.settings.logo_width }}px;">
       {% if section.settings.logo != blank %}
         <a href="/" class="header__logo">
@@ -11,10 +12,12 @@
         </a>
       {% endif %}
     </div>
-    <nav class="header__menu flex" x-date>
-      <button class="md:hidden" type="button" @click="$dispatch('toggle-menu')">
+
+    <nav class="header__menu flex" x-data>
+      <button class="md:hidden" @click="$dispatch('toggle-menu')" type="button">
         {% render 'icon-menu', class: 'w-10' %}
       </button>
+
       <ul class="header__menu-nav hidden md:flex">
         {% for link in section.settings.menu.links %}
           {% if link.links != blank %}
@@ -23,7 +26,7 @@
               <ul class="nav__item-submenu absolute bg-white border py-3 px-4 min-w-[160px] top-16 left-1/2 transform -translate-x-1/2">
                 {% for sublink in linklists[link.handle].links %}
                   <li>
-                    <a href="{{ sublink.url }}" class="block py-1 hover:opacity-75">
+                    <a class="block py-1 hover:opacity-75 " href="{{ sublink.url }}">
                       {{ sublink.title }}
                     </a>
                   </li>
@@ -68,6 +71,7 @@
     </div>
 
   </header>
+
 
   {% render 'mobile-menu' %}
 
