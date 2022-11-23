@@ -57,10 +57,15 @@
         "heading": {
           "type": "heading",
           "settings": {
+<<<<<<< HEAD
             "label": "Image banner text",
             "default": "<p>Answer goes here...</p>",
             "heading_size": "large",
             "id": "heading"
+=======
+            "heading": "<p>Talk about your brand<\/p>",
+            "heading_size": "large"
+>>>>>>> b6caae14d960ba5097cfedeeda346cf8a3858d8e
           }
         },
         "text": {
@@ -75,6 +80,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
@@ -86,15 +93,25 @@
       "disabled": true,
       "settings": {
         "title": "Featured products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
-        "color_scheme": "background-1",
+        "columns_desktop": 4,
+        "full_width": false,
         "show_view_all": false,
-        "swipe_on_mobile": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 28,
         "padding_bottom": 36
       }
@@ -130,8 +147,10 @@
       ],
       "settings": {
         "heading": "Multimedia collage",
+        "heading_size": "h1",
         "desktop_layout": "left",
         "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -142,6 +161,7 @@
       "disabled": true,
       "settings": {
         "heading": "",
+        "heading_size": "h1",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
@@ -189,16 +209,40 @@
       ],
       "settings": {
         "title": "",
+        "heading_size": "h1",
         "image_width": "third",
         "image_ratio": "adapt",
+        "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
         "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "fa1d92d2-0c12-4fae-b4bc-61d69839e0b9": {
+      "type": "navtive-product-slider",
+      "settings": {
+        "full_width": false,
+        "title": "Featured collection",
+        "align_text": "text-center",
+        "font_size": 24,
+        "collection": "stuff-toys",
+        "products_to_show": 6,
+        "button": "",
+        "button_link": "",
+        "grid_desktop": "lg:grid-cols-5",
+        "grid_tablet": "md:grid-cols-3",
+        "grid_mobile": "grid-cols-2",
+        "slider": false,
+        "items_per_row": "lg:w-1\/3",
+        "items_per_row_tablet": "md:w-1\/2",
+        "items_per_row_mobile": "w-1\/2",
+        "show_secondary_image": false
       }
     }
   },
@@ -208,6 +252,7 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "fa1d92d2-0c12-4fae-b4bc-61d69839e0b9"
   ]
 }
