@@ -7,8 +7,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner!",
-            "heading_size": "h0"
+            "heading": "Image banner",
+            "heading_size": "large"
           }
         },
         "text": {
@@ -36,13 +36,12 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 40,
         "image_height": "large",
         "adapt_height_first_image": false,
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "bottom-center",
         "show_text_box": false,
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "center",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
@@ -56,183 +55,102 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>TAKING CARE OF YOURSELF DOESN'T HAVE TO BE A HASSLE<\/p>",
+            "heading": "Talk about your brand",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Have a fun, convenient, and easy-to-maintain self-care routine with JUJU.Your favorite effervescent supplement line is growing to fit all your beauty and wellness needs!<\/strong><\/p>"
-          }
-        },
-        "23873cd0-aae6-42b4-bd5d-d187086f9f31": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "shopify:\/\/collections",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
           }
         }
       },
       "block_order": [
         "heading",
-        "text",
-        "23873cd0-aae6-42b4-bd5d-d187086f9f31"
+        "text"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-2",
+        "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 0
       }
     },
-    "3cb5de27-f439-47da-bc32-1d5a3f583367": {
-      "type": "collection-list",
+    "featured_collection": {
+      "type": "featured-collection",
       "disabled": true,
-      "blocks": {
-        "template--16963608183061__3cb5de27-f439-47da-bc32-1d5a3f583367-16686657365a905fd2-0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "best-seller"
-          }
-        },
-        "template--16963608183061__3cb5de27-f439-47da-bc32-1d5a3f583367-16686657365a905fd2-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "casual"
-          }
-        },
-        "template--16963608183061__3cb5de27-f439-47da-bc32-1d5a3f583367-16686657365a905fd2-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "favourite"
-          }
-        },
-        "33fadd9e-48b0-4383-9aa1-14f540ad48e9": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "must-have"
-          }
-        }
-      },
-      "block_order": [
-        "template--16963608183061__3cb5de27-f439-47da-bc32-1d5a3f583367-16686657365a905fd2-0",
-        "template--16963608183061__3cb5de27-f439-47da-bc32-1d5a3f583367-16686657365a905fd2-1",
-        "template--16963608183061__3cb5de27-f439-47da-bc32-1d5a3f583367-16686657365a905fd2-2",
-        "33fadd9e-48b0-4383-9aa1-14f540ad48e9"
-      ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 4,
-        "color_scheme": "background-2",
+        "title": "Featured products",
+        "collection": "all",
+        "products_to_show": 8,
+        "color_scheme": "background-1",
         "show_view_all": false,
-        "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 28,
         "padding_bottom": 36
       }
     },
-    "43e63253-294b-4c5a-92b4-52d857113ea2": {
-      "type": "image-with-text",
+    "collage": {
+      "type": "collage",
       "disabled": true,
       "blocks": {
-        "template--16963608183061__43e63253-294b-4c5a-92b4-52d857113ea2-1668674937b39a4d0c-0": {
-          "type": "heading",
+        "collection-0": {
+          "type": "collection",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
+            "collection": ""
           }
         },
-        "template--16963608183061__43e63253-294b-4c5a-92b4-52d857113ea2-1668674937b39a4d0c-1": {
-          "type": "text",
+        "product": {
+          "type": "product",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
+            "product": "",
+            "second_image": false
           }
         },
-        "template--16963608183061__43e63253-294b-4c5a-92b4-52d857113ea2-1668674937b39a4d0c-2": {
-          "type": "button",
+        "collection-1": {
+          "type": "collection",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "collection": ""
           }
         }
       },
       "block_order": [
-        "template--16963608183061__43e63253-294b-4c5a-92b4-52d857113ea2-1668674937b39a4d0c-0",
-        "template--16963608183061__43e63253-294b-4c5a-92b4-52d857113ea2-1668674937b39a4d0c-1",
-        "template--16963608183061__43e63253-294b-4c5a-92b4-52d857113ea2-1668674937b39a4d0c-2"
+        "collection-0",
+        "product",
+        "collection-1"
       ],
       "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
+        "heading": "Multimedia collage",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "c8112307-e2a2-4341-a185-f8237d958adc": {
-      "type": "image-with-text",
+    "video": {
+      "type": "video",
       "disabled": true,
-      "blocks": {
-        "template--16963608183061__c8112307-e2a2-4341-a185-f8237d958adc-1668674937b39a4d0c-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "template--16963608183061__c8112307-e2a2-4341-a185-f8237d958adc-1668674937b39a4d0c-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "template--16963608183061__c8112307-e2a2-4341-a185-f8237d958adc-1668674937b39a4d0c-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16963608183061__c8112307-e2a2-4341-a185-f8237d958adc-1668674937b39a4d0c-0",
-        "template--16963608183061__c8112307-e2a2-4341-a185-f8237d958adc-1668674937b39a4d0c-1",
-        "template--16963608183061__c8112307-e2a2-4341-a185-f8237d958adc-1668674937b39a4d0c-2"
-      ],
       "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
+        "heading": "",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "97c1502d-5455-4b3f-94de-7acb623757ec": {
+    "multicolumn": {
       "type": "multicolumn",
       "disabled": true,
       "blocks": {
-        "template--16963608183061__97c1502d-5455-4b3f-94de-7acb623757ec-16686749376b4fc9b2-0": {
+        "column1": {
           "type": "column",
           "settings": {
             "title": "Column",
@@ -241,7 +159,7 @@
             "link": ""
           }
         },
-        "template--16963608183061__97c1502d-5455-4b3f-94de-7acb623757ec-16686749376b4fc9b2-1": {
+        "column2": {
           "type": "column",
           "settings": {
             "title": "Column",
@@ -250,7 +168,7 @@
             "link": ""
           }
         },
-        "template--16963608183061__97c1502d-5455-4b3f-94de-7acb623757ec-16686749376b4fc9b2-2": {
+        "column3": {
           "type": "column",
           "settings": {
             "title": "Column",
@@ -261,23 +179,20 @@
         }
       },
       "block_order": [
-        "template--16963608183061__97c1502d-5455-4b3f-94de-7acb623757ec-16686749376b4fc9b2-0",
-        "template--16963608183061__97c1502d-5455-4b3f-94de-7acb623757ec-16686749376b4fc9b2-1",
-        "template--16963608183061__97c1502d-5455-4b3f-94de-7acb623757ec-16686749376b4fc9b2-2"
+        "column1",
+        "column2",
+        "column3"
       ],
       "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
+        "title": "",
+        "image_width": "third",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
         "button_link": "",
-        "color_scheme": "background-2",
-        "columns_mobile": "1",
         "swipe_on_mobile": false,
+        "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -286,9 +201,9 @@
   "order": [
     "image_banner",
     "rich_text",
-    "3cb5de27-f439-47da-bc32-1d5a3f583367",
-    "43e63253-294b-4c5a-92b4-52d857113ea2",
-    "c8112307-e2a2-4341-a185-f8237d958adc",
-    "97c1502d-5455-4b3f-94de-7acb623757ec"
+    "featured_collection",
+    "collage",
+    "video",
+    "multicolumn"
   ]
 }
